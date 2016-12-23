@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Stream Calculator</title>
+
+    <link href="css/semantic.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+    <div class="divider hidden"></div>
+    <div class="ui text segment container">
+      <div class="ui grid">
+      <div class="ten wide column">
+      <form class="ui form">
+      <h1 class="ui dividing header">DVR/NVR 預估錄影天數試算</h1>
+        <div class="field">
+          <label>攝影機數量</label>
+          <input type="text" name="cameraCount" value="16">
+        </div>
+        <div class="field">
+          <label>主碼流 (Kbps)</label>
+          <select class="ui fluid dropdown" name="mainStream">
+            <option value="512">512</option>
+            <option value="1024">1024</option>
+            <option value="1536">1536</option>
+            <option value="2048" selected>2048</option>
+            <option value="2560">2560</option>
+            <option value="3072">3072</option>
+            <option value="3584">3584</option>
+            <option value="4096">4096</option>
+            <option value="5120">5120</option>
+            <option value="5632">5632</option>
+            <option value="6144">6144</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>子碼流 (Kbps)</label>
+          <select class="ui fluid dropdown" name="subStream">
+            <option value="64">64</option>
+            <option value="128">128</option>
+            <option value="192">192</option>
+            <option value="256">256</option>
+            <option value="320">320</option>
+            <option value="384">384</option>
+            <option value="448">448</option>
+            <option value="512" selected>512</option>
+            <option value="1024">1024</option>
+            <option value="1280">1280</option>
+            <option value="1536">1536</option>
+            <option value="2048">2048</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>硬碟容量 (TB)</label>
+          <input type="text" name="hddSize" value="4">
+        </div>
+        <button class="ui primary button" type="submit">試算</button>
+        <div class="ui success message">
+          <div class="header" id="record-day"></div>
+        </div>
+      </form>
+
+      </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
