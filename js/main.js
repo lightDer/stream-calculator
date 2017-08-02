@@ -34,12 +34,12 @@
       o[attr.name] = attr.value;
     });
 
-    var days = calcuateDays(o);
+    var days = calculateDays(o);
     $recordDay.text('預估錄影天數: ' + days + ' 天');
     $(this).addClass('success');
   });
 
-  function calcuateDays(obj) {
+  function calculateDays(obj) {
     var cameraCount = Number(obj.cameraCount);
     var mainStream = Number(obj.mainStream);
     var subStream = Number(obj.subStream);
